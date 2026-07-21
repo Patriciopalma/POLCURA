@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polcura Export — Fruta fresca desde Chile y Perú</title>
+<meta name="description" content="Polcura Export conecta productores de Chile y Perú con mercados internacionales, acompañando cada etapa desde el origen hasta la exportación de fruta fresca.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<!--
+  ASSETS PENDIENTES DE REEMPLAZO EN PRODUCCIÓN (ver README.md):
+  assets/img/logo-polcura.svg          -> logo real de Polcura Export
+  assets/img/hero-placeholder.svg      -> video/foto real de uvas en el campo
+  assets/img/producto-cerezas.svg      -> foto real de cerezas
+  assets/img/producto-uvas-kiwi.svg    -> foto real de uvas/kiwi
+  assets/img/presentacion-campo.svg    -> foto real de brote en el campo
+  assets/img/productores.svg           -> foto real de productor con cajón de cerezas
+-->
+</head>
+<body>
+
+<div class="page-wrap" id="page-wrap">
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <a href="#inicio" aria-label="Polcura Export — inicio" class="logo-link">
+    <img src="assets/img/logo-polcura.svg" alt="Polcura Export"/>
+  </a>
+
+  <nav class="main-nav" aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#empresa">Empresa</a>
+    <a href="#productos">Productos</a>
+    <a href="#proceso">Nuestro proceso</a>
+    <a href="#productores">Productores</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="header-right">
+    <div class="lang-switch" role="group" aria-label="Selector de idioma">
+      <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+      <span>|</span>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <a href="#contacto" class="cta-header"><span data-i18n="talk">Conversemos</span> →</a>
+    <button aria-label="Abrir menú" aria-expanded="false" class="hamburger" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegación">
+  <a href="#inicio" data-close-menu>Inicio</a>
+  <a href="#empresa" data-close-menu>Empresa</a>
+  <a href="#productos" data-close-menu>Productos</a>
+  <a href="#proceso" data-close-menu>Nuestro proceso</a>
+  <a href="#productores" data-close-menu>Productores</a>
+  <a href="#contacto" data-close-menu>Contacto</a>
+  <a href="#contacto" class="mobile-cta" data-close-menu><span data-i18n="talk">Conversemos</span> →</a>
+  <img src="assets/img/logo-polcura.svg" alt="Polcura Export"/>
+</div>
+
+<!-- HERO -->
+<section id="inicio" data-screen-label="Hero" class="hero">
+  <img src="assets/img/hero-placeholder.svg" alt="Video de uvas frescas en el campo" class="hero-media" id="hero-media"/>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-tag">EXPORTACIÓN DE FRUTA FRESCA · CHILE + PERÚ</span>
+    <h1 class="hero-title">
+      <span data-i18n="heroTitle1">Fruta fresca,</span><br/>
+      <span data-i18n="heroTitle2">gestionada con</span> <span class="accent" data-i18n="heroTitle3">precisión.</span>
+    </h1>
+    <p class="hero-text" data-i18n="heroBody">Conectamos productores de Chile y Perú con mercados internacionales, acompañando cada etapa desde el origen hasta la exportación.</p>
+    <div class="hero-btn-row">
+      <a href="#productos" class="btn-primary"><span data-i18n="btnProducts">Conoce nuestros productos</span> →</a>
+      <a href="#contacto" class="btn-secondary" data-i18n="btnTalk">Habla con nuestro equipo</a>
+    </div>
+    <div class="hero-indicators">
+      <div class="hero-indicator"><span class="hero-indicator-label" data-i18n="indOrigin">Origen</span><span class="hero-indicator-val">Chile + Perú</span></div>
+      <div class="hero-indicator"><span class="hero-indicator-label" data-i18n="indOperation">Operación</span><span class="hero-indicator-val" data-i18n="indOperationVal">Fruta fresca</span></div>
+      <div class="hero-indicator"><span class="hero-indicator-label" data-i18n="indScope">Alcance</span><span class="hero-indicator-val" data-i18n="indScopeVal">Mercados internacionales</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FRANJA DE CONFIANZA -->
+<!-- Cifras y afirmaciones a validar por Polcura antes de publicar -->
+<section aria-label="Indicadores de confianza" class="trust-strip reveal" data-reveal data-stats-box>
+  <div class="trust-item">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A4C93B" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+    <div><div class="trust-num">+<span id="stat-years">0</span> años</div><div class="trust-label">Experiencia en el sector frutícola.</div></div>
+  </div>
+  <div class="trust-item">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A4C93B" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.3"/></svg>
+    <div><div class="trust-num">Chile + Perú</div><div class="trust-label">Presencia productiva en dos países.</div></div>
+  </div>
+  <div class="trust-item">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A4C93B" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.7 2.6 4 5.7 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.7-4-9s1.3-6.4 4-9z"/></svg>
+    <div><div class="trust-num">Mercados internacionales</div><div class="trust-label">Exportación de fruta fresca al mundo.</div></div>
+  </div>
+  <div class="trust-item">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A4C93B" stroke-width="1.5" aria-hidden="true"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+    <div><div class="trust-num">Proceso integral</div><div class="trust-label">Desde el campo hasta la operación comercial.</div></div>
+  </div>
+</section>
+
+<!-- PRESENTACIÓN -->
+<section id="empresa" data-screen-label="Empresa" class="presentation reveal" data-reveal>
+  <div class="presentation-col-left">
+    <span class="eyebrow">NUESTRO COMPROMISO</span>
+    <h2>La calidad comienza mucho antes de exportar.</h2>
+    <p class="body-text">En Polcura entendemos que un buen resultado comienza en el campo. Por eso trabajamos junto a nuestros productores, acompañando la planificación, el manejo, la calidad y la orientación comercial de cada producto.</p>
+    <a href="#empresa" class="btn-outline">Conoce nuestra empresa →</a>
+  </div>
+  <div class="presentation-col-right">
+    <img src="assets/img/presentacion-campo.svg" alt="Brote joven en el campo al amanecer, plantación al fondo" class="presentation-img"/>
+    <div class="float-tag-wrap">
+      <span class="float-tag">Asesoría</span>
+      <span class="float-tag">Planificación</span>
+      <span class="float-tag">Calidad</span>
+      <span class="float-tag">Exportación</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos" data-screen-label="Productos" class="products reveal" data-reveal>
+  <div class="products-head">
+    <div>
+      <span class="eyebrow">NUESTROS PRODUCTOS</span>
+      <h2>Fruta seleccionada desde su origen.</h2>
+    </div>
+    <div class="products-intro">
+      <p class="body-text-small">Trabajamos con fruta fresca seleccionada para responder a las exigencias de mercados internacionales.</p>
+      <a href="#productos" class="link-arrow">Ver todos los productos →</a>
+    </div>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-info cherry">
+        <h3 class="product-title">Cerezas</h3>
+        <p class="product-text">Selección y control de condición para preservar frescura hasta destino.</p>
+        <a href="#productos" class="product-btn">Ver producto →</a>
+      </div>
+      <div class="product-photo-wrap">
+        <img src="assets/img/producto-cerezas.svg" alt="Selección manual de cerezas en línea de packing" class="product-photo"/>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-info kiwi">
+        <h3 class="product-title">Uvas y Kiwi</h3>
+        <p class="product-text">Calidad, firmeza y manejo cuidadoso desde el campo hasta la exportación.</p>
+        <a href="#productos" class="product-btn dark">Ver producto →</a>
+      </div>
+      <div class="product-photo-wrap">
+        <img src="assets/img/producto-uvas-kiwi.svg" alt="Uvas, kiwis y cerezas frescas sobre mesa de madera con huerto al fondo" class="product-photo"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" data-screen-label="Proceso" class="process reveal" data-reveal data-process-box>
+  <span class="eyebrow">NUESTRO PROCESO</span>
+  <h2>Control en cada punto crítico.</h2>
+  <div class="process-line" id="process-line">
+    <div class="process-step" data-process-step>
+      <div class="process-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.6"><path d="M4 20c3-6 5-6 8-6s5 0 8 6M12 14V4"/></svg></div>
+      <span class="process-num">01</span>
+      <h3 class="process-title">Campo</h3>
+      <p class="process-text">Planificación y acompañamiento productivo.</p>
+    </div>
+    <div class="process-step" data-process-step>
+      <div class="process-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <span class="process-num">02</span>
+      <h3 class="process-title">Selección</h3>
+      <p class="process-text">Control de condición, calidad y cumplimiento.</p>
+    </div>
+    <div class="process-step" data-process-step>
+      <div class="process-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.6"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/></svg></div>
+      <span class="process-num">03</span>
+      <h3 class="process-title">Embalaje</h3>
+      <p class="process-text">Coordinación de formatos y necesidades comerciales.</p>
+    </div>
+    <div class="process-step" data-process-step>
+      <div class="process-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.6"><path d="M3 12h13M12 5l7 7-7 7"/></svg></div>
+      <span class="process-num">04</span>
+      <h3 class="process-title">Exportación</h3>
+      <p class="process-text">Gestión eficiente de los puntos críticos del proceso.</p>
+    </div>
+    <div class="process-step" data-process-step>
+      <div class="process-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.7 2.6 4 5.7 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.7-4-9s1.3-6.4 4-9z"/></svg></div>
+      <span class="process-num">05</span>
+      <h3 class="process-title">Mercado</h3>
+      <p class="process-text">Diversificación y orientación comercial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTORES -->
+<section id="productores" data-screen-label="Productores" class="producers reveal" data-reveal>
+  <div class="producers-text-col">
+    <span class="eyebrow-light">TRABAJAMOS DESDE EL ORIGEN</span>
+    <h2 class="light">El productor forma parte del negocio.</h2>
+    <p class="body-text light">Nuestro trabajo busca integrar a los productores al proceso comercial, entregándoles orientación y acompañamiento para avanzar hacia una mejora continua.</p>
+    <a href="#contacto" class="btn-light-cta">Trabaja con Polcura →</a>
+    <div class="benefits-grid">
+      <div class="benefit-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A4C93B" stroke-width="1.5"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1.5-4 4-5.5 7-5.5S18.5 16 20 20"/></svg><div><strong class="benefit-title">Orientación técnica</strong><p class="benefit-text">Acompañamos cada etapa del cultivo.</p></div></div>
+      <div class="benefit-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A4C93B" stroke-width="1.5"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><div><strong class="benefit-title">Acompañamiento productivo</strong><p class="benefit-text">Apoyo constante en manejo y calidad.</p></div></div>
+      <div class="benefit-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A4C93B" stroke-width="1.5"><path d="M4 18l6-8 4 5 6-9"/></svg><div><strong class="benefit-title">Visión comercial</strong><p class="benefit-text">Conectamos la fruta con oportunidades.</p></div></div>
+      <div class="benefit-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A4C93B" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-5"/></svg><div><strong class="benefit-title">Mejora continua</strong><p class="benefit-text">Buscamos resultados sostenibles en el tiempo.</p></div></div>
+    </div>
+  </div>
+  <div class="producers-img-col">
+    <img src="assets/img/productores.svg" alt="Productor sosteniendo un cajón de cerezas recién cosechadas en el huerto" class="producers-img"/>
+  </div>
+</section>
+
+<!-- DOS ORÍGENES -->
+<section class="origins reveal" data-reveal>
+  <div class="origins-text-col">
+    <span class="eyebrow">DOS ORÍGENES</span>
+    <h2>Dos orígenes.<br/>Una visión global.</h2>
+    <p class="body-text">Nuestra presencia en Chile y Perú nos permite construir relaciones productivas y comerciales desde dos territorios agrícolas relevantes de Sudamérica, exportando fruta fresca a mercados de América, Europa y Asia.</p>
+    <a href="#empresa" class="btn-outline">Conoce nuestra empresa →</a>
+    <div class="map-legend">
+      <span class="map-legend-item"><span class="map-dot deep"></span>Origen: Chile + Perú</span>
+      <span class="map-legend-item"><span class="map-dot kiwi"></span>Destinos de exportación</span>
+    </div>
+    <p class="map-caption">Brasil · Argentina · Uruguay · Colombia · Ecuador · México · Estados Unidos · Panamá · Canadá · Inglaterra · Holanda · Alemania · Rusia · Japón · China · Corea · Taiwán · Filipinas</p>
+  </div>
+  <div class="map-wrap">
+    <iframe src="mapa-mercados.html" title="Mapa de mercados de exportación de Polcura: Chile y Perú hacia América, Europa y Asia" class="map-frame" loading="lazy"></iframe>
+    <div class="map-fade"></div>
+  </div>
+</section>
+
+<!-- PRINCIPIOS -->
+<section class="principles reveal" data-reveal>
+  <span class="eyebrow">NUESTROS PRINCIPIOS</span>
+  <div class="principles-grid">
+    <div class="principle-item">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.5"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      <h3 class="principle-title">Transparencia</h3>
+      <p class="principle-text">Relaciones claras y honestas entre productores, clientes y equipo comercial.</p>
+    </div>
+    <div class="principle-item">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.5"><path d="M12 3l2.6 5.4 6 .8-4.3 4.1 1 6-5.3-2.9-5.3 2.9 1-6-4.3-4.1 6-.8z"/></svg>
+      <h3 class="principle-title">Calidad</h3>
+      <p class="principle-text">Decisiones enfocadas en la condición y el valor del producto.</p>
+    </div>
+    <div class="principle-item">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.5"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>
+      <h3 class="principle-title">Eficiencia</h3>
+      <p class="principle-text">Coordinación ágil de los procesos críticos de exportación.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" data-screen-label="Contacto" class="contact reveal" data-reveal>
+  <div class="contact-img-col">
+    <div class="contact-headline-wrap">
+      <span class="contact-eyebrow">CONTACTO</span>
+      <svg width="30" height="30" viewBox="0 0 30 30" class="contact-glyph-circle" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#A4C93B"/></svg>
+      <svg width="54" height="54" viewBox="0 0 54 54" class="contact-glyph-arc" aria-hidden="true"><path d="M6 40 A24 24 0 0 1 48 30" fill="none" stroke="#A4C93B" stroke-width="1.4"/></svg>
+      <h2 class="contact-title">Conectemos<br/>el origen<br/>con nuevas<br/>oportunidades.</h2>
+    </div>
+    <p class="contact-body">¿Eres productor, importador o distribuidor? Conversemos sobre productos, temporadas y posibilidades de colaboración.</p>
+  </div>
+  <div id="contacto-form" class="contact-form-col">
+    <form class="contact-form" id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="field-wrap">
+          <label for="f-name">Nombre *</label>
+          <input id="f-name" name="name" type="text"/>
+          <span class="error-text" data-error-for="name" hidden></span>
+        </div>
+        <div class="field-wrap">
+          <label for="f-company">Empresa</label>
+          <input id="f-company" name="company" type="text"/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field-wrap">
+          <label for="f-country">País *</label>
+          <input id="f-country" name="country" type="text"/>
+          <span class="error-text" data-error-for="country" hidden></span>
+        </div>
+        <div class="field-wrap">
+          <label for="f-email">Correo electrónico *</label>
+          <input id="f-email" name="email" type="email"/>
+          <span class="error-text" data-error-for="email" hidden></span>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field-wrap">
+          <label for="f-phone">Teléfono</label>
+          <input id="f-phone" name="phone" type="tel"/>
+        </div>
+        <div class="field-wrap">
+          <label for="f-type">Tipo de contacto *</label>
+          <select id="f-type" name="type">
+            <option value="">Selecciona…</option>
+            <option value="productor">Productor</option>
+            <option value="importador">Importador</option>
+            <option value="distribuidor">Distribuidor</option>
+            <option value="proveedor">Proveedor</option>
+            <option value="otro">Otro</option>
+          </select>
+          <span class="error-text" data-error-for="type" hidden></span>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field-wrap">
+          <label for="f-product">Producto de interés</label>
+          <select id="f-product" name="product">
+            <option value="">Selecciona…</option>
+            <option value="cerezas">Cerezas</option>
+            <option value="uvas">Uvas</option>
+            <option value="kiwi">Kiwi</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="field-wrap">
+          <label for="f-volume">Volumen aproximado</label>
+          <input id="f-volume" name="volume" type="text" placeholder="ej. 5 contenedores"/>
+        </div>
+      </div>
+      <div class="field-wrap-full">
+        <label for="f-message">Mensaje *</label>
+        <textarea id="f-message" name="message" rows="4"></textarea>
+        <span class="error-text" data-error-for="message" hidden></span>
+      </div>
+      <label class="checkbox-row">
+        <input type="checkbox" name="privacy"/>
+        <span>Acepto la <a href="#" class="inline-link">política de privacidad</a>. *</span>
+      </label>
+      <span class="error-text" data-error-for="privacy" hidden></span>
+      <input type="text" name="company_website" class="honeypot-field" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+      <button type="submit" class="submit-btn" id="submit-btn">Enviar mensaje →</button>
+    </form>
+    <div class="confirm-box" id="confirm-box" role="status" hidden>
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#123D2B" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+      <h3 class="confirm-title">Mensaje recibido.</h3>
+      <p class="confirm-text">Gracias por escribirnos. Nuestro equipo se pondrá en contacto a la brevedad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-col">
+    <img src="assets/img/logo-polcura.svg" alt="Polcura Export"/>
+    <p class="footer-text">Fruta fresca desde Chile y Perú para mercados internacionales.</p>
+  </div>
+  <div class="footer-col">
+    <h4 class="footer-head">Navegación</h4>
+    <a href="#inicio" class="footer-link">Inicio</a>
+    <a href="#empresa" class="footer-link">Empresa</a>
+    <a href="#productos" class="footer-link">Productos</a>
+    <a href="#proceso" class="footer-link">Nuestro proceso</a>
+    <a href="#productores" class="footer-link">Productores</a>
+    <a href="#contacto" class="footer-link">Contacto</a>
+  </div>
+  <div class="footer-col">
+    <h4 class="footer-head">Productos</h4>
+    <span class="footer-link">Cerezas</span>
+    <span class="footer-link">Uvas</span>
+    <span class="footer-link">Kiwi</span>
+    <h4 class="footer-head spaced">Oficinas</h4>
+    <span class="footer-link">Chile</span>
+    <span class="footer-link">Perú</span>
+  </div>
+  <div class="footer-col">
+    <h4 class="footer-head">Contacto</h4>
+    <!-- Datos públicos sujetos a validación por Polcura -->
+    <a href="mailto:pedropablo@polcuraexport.com" class="footer-link">pedropablo@polcuraexport.com</a>
+    <a href="tel:+56722391307" class="footer-link">+56 72 239 1307</a>
+    <span class="footer-addr">Manuel Olegario Soto 150, of. 202–203, Olivar, Región de O'Higgins, Chile.</span>
+    <a href="#" class="footer-link" aria-label="LinkedIn de Polcura Export">LinkedIn</a>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Polcura Export. Todos los derechos reservados.</span>
+    <div class="footer-bottom-links">
+      <a href="#">Política de privacidad</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Polcura Export</title>
+  <g fill="none" stroke="#A4C93B" stroke-width="2.4">
+    <circle cx="18" cy="30" r="11"/>
+    <path d="M18 19c3 3 3 8 0 11-3-3-3-8 0-11z" fill="#A4C93B" stroke="none"/>
+  </g>
+  <text x="42" y="27" font-family="Fraunces, Georgia, serif" font-size="21" font-weight="500" fill="#FFFFFF">Polcura</text>
+  <text x="42" y="46" font-family="Inter, Arial, sans-serif" font-size="11.5" letter-spacing="0.14em" fill="#A4C93B">EXPORT</text>
+</svg>

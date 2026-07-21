@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="prodTitle">
+  <title id="prodTitle">Productor con cajón de cerezas recién cosechadas</title>
+  <defs>
+    <linearGradient id="prodBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c5c3f"/>
+      <stop offset="100%" stop-color="#082E20"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#prodBg)"/>
+  <g opacity="0.9">
+    <rect x="330" y="520" width="240" height="140" rx="10" fill="#F2C94C" opacity="0.9"/>
+    <rect x="330" y="520" width="240" height="140" rx="10" fill="none" stroke="#082E20" stroke-width="4" opacity="0.5"/>
+    <g fill="#692E48">
+      <circle cx="380" cy="530" r="16"/><circle cx="420" cy="524" r="16"/><circle cx="460" cy="530" r="16"/>
+      <circle cx="500" cy="524" r="16"/><circle cx="540" cy="530" r="16"/>
+    </g>
+  </g>
+  <path d="M180 900 C220 700 340 640 450 640 C560 640 680 700 720 900 Z" fill="#123D2B" opacity="0.8"/>
+  <text x="40" y="860" font-family="Inter, Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.4)">Imagen de referencia — reemplazar por fotografía real</text>
+</svg>

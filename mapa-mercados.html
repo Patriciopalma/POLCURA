@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Polcura — Mapa de mercados</title>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<style>
+  html,body{margin:0;padding:0;background:transparent;overflow:hidden;}
+  #wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+  svg{width:100%;height:100%;display:block;}
+  .pulse{animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+</style>
+</head>
+<body>
+<div id="wrap"><svg id="map" viewBox="0 0 960 520"></svg></div>
+<script>
+// ISO numeric-id -> label (ES) for Polcura's confirmed destination markets + origins
+var destinations = {
+  '76':'Brasil', '32':'Argentina', '858':'Uruguay', '170':'Colombia', '218':'Ecuador',
+  '484':'México', '840':'Estados Unidos', '591':'Panamá', '124':'Canadá',
+  '826':'Inglaterra', '528':'Holanda', '276':'Alemania', '643':'Rusia',
+  '392':'Japón', '156':'China', '410':'Corea', '158':'Taiwán', '608':'Filipinas'
+};
+var origins = { '152':'Chile', '604':'Perú' };
+
+var svg = d3.select('#map');
+var projection = d3.geoNaturalEarth1().scale(155).translate([480, 265]);
+var path = d3.geoPath(projection);
+
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json')
+  .then(function(r){ return r.json(); })
+  .then(function(topology){
+    var countries = topojson.feature(topology, topology.objects.countries).features;
+
+    svg.selectAll('path.country')
+      .data(countries)
+      .enter().append('path')
+      .attr('class','country')
+      .attr('d', path)
+      .attr('fill', function(d){
+        var id = String(d.id);
+        if (origins[id]) return '#123D2B';
+        if (destinations[id]) return '#A4C93B';
+        return '#E7E1D0';
+      })
+      .attr('stroke', '#FCFBF7')
+      .attr('stroke-width', 0.6);
+
+    // connecting lines + dots from origins to each destination centroid
+    var originFeatures = countries.filter(function(d){ return origins[String(d.id)]; });
+    var destFeatures = countries.filter(function(d){ return destinations[String(d.id)]; });
+
+    originFeatures.forEach(function(o){
+      var oc = path.centroid(o);
+      destFeatures.forEach(function(d){
+        var dc = path.centroid(d);
+        var mx = (oc[0]+dc[0])/2, my = Math.min(oc[1],dc[1]) - 40;
+        svg.append('path')
+          .attr('d', 'M'+oc[0]+','+oc[1]+' Q'+mx+','+my+' '+dc[0]+','+dc[1])
+          .attr('fill','none').attr('stroke','#7EBB3B').attr('stroke-width',0.7)
+          .attr('stroke-dasharray','2 3').attr('opacity',0.55);
+      });
+      svg.append('circle').attr('cx',oc[0]).attr('cy',oc[1]).attr('r',5).attr('fill','#F2C94C').attr('class','pulse');
+    });
+    destFeatures.forEach(function(d){
+      var dc = path.centroid(d);
+      svg.append('circle').attr('cx',dc[0]).attr('cy',dc[1]).attr('r',3).attr('fill','#123D2B');
+    });
+  });
+</script>
+</body>
+</html>

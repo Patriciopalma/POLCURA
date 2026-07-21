@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="cerezasTitle">
+  <title id="cerezasTitle">Selección de cerezas</title>
+  <rect width="700" height="700" fill="#692E48"/>
+  <rect width="700" height="700" fill="#123D2B" opacity="0.15"/>
+  <g stroke="#F2C94C" stroke-width="6" fill="none" opacity="0.9">
+    <path d="M300 260 C320 190 380 170 420 190"/>
+    <path d="M340 260 C370 210 410 200 440 220"/>
+  </g>
+  <circle cx="300" cy="330" r="80" fill="#F2C94C"/>
+  <circle cx="420" cy="360" r="90" fill="#F2C94C" opacity="0.85"/>
+  <circle cx="300" cy="330" r="80" fill="none" stroke="#692E48" stroke-width="4" opacity="0.4"/>
+  <circle cx="420" cy="360" r="90" fill="none" stroke="#692E48" stroke-width="4" opacity="0.4"/>
+  <text x="40" y="650" font-family="Inter, Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.5)">Imagen de referencia — reemplazar por fotografía real</text>
+</svg>
