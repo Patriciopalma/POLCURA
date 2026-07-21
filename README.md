@@ -39,7 +39,6 @@ mismas rutas/tamaños, para que el sitio se vea completo y funcional. Antes de p
 
 | Archivo actual (placeholder)              | Reemplazar por                                              |
 |--------------------------------------------|---------------------------------------------------------------|
-| `assets/img/logo-polcura.svg`              | Logo real de Polcura Export                                   |
 | `assets/img/presentacion-campo.svg`        | Foto de brote joven en el campo al amanecer                   |
 | `assets/img/producto-cerezas.svg`          | Foto de selección de cerezas en packing                       |
 | `assets/img/producto-uvas-kiwi.svg`        | Foto de uvas/kiwi/cerezas frescas                              |
@@ -48,6 +47,25 @@ mismas rutas/tamaños, para que el sitio se vea completo y funcional. Antes de p
 Para cada uno, mantén el mismo nombre de archivo (o actualiza la ruta correspondiente en
 `index.html`) y reemplaza el `<img>` por la foto real; el CSS ya está pensado para `object-fit: cover`
 así que cualquier proporción razonable se recorta bien.
+
+### Logo (ya montado)
+
+`assets/img/logo-icon-white.png` (para fondos oscuros: header, menú móvil, footer) y
+`assets/img/logo-icon-color.png` (variante a color, disponible para fondos claros) salieron del
+logo real entregado por el cliente vía Drive. El archivo original tenía dos problemas que se
+corrigieron al procesarlo:
+
+- Venía en un lienzo de 4320×944 px con el ícono ocupando solo una franja angosta a la izquierda
+  — se recortó al contenido real y se redujo a 200px de alto (suficiente para retina a los
+  tamaños que se usa, ~28-34px).
+- El fondo "transparente" en realidad era un relleno blanco opaco cubriendo todo el lienzo (por
+  eso se veía "en blanco" al pegarlo en un chat) — se regeneró la transparencia real a partir del
+  contraste de color/alfa.
+
+El archivo entregado solo traía el ícono (sin el texto "Polcura Export"), así que el wordmark se
+armó en HTML/CSS (`.logo-wordmark` en `index.html`/`style.css`) en vez de quedar quemado en la
+imagen — así el texto se ve nítido a cualquier tamaño y es fácil de ajustar. También se generó
+`assets/img/favicon.png` a partir del ícono a color.
 
 ### Video del hero
 

@@ -95,9 +95,13 @@ img, video { max-width: 100%; display: block; }
   .site-header { padding: 14px 20px; }
 }
 
-.logo-link { display: flex; align-items: center; height: 34px; }
-@media (max-width: 1099px) { .logo-link { height: 30px; } }
-.logo-link img { height: 100%; width: auto; }
+.logo-mark, .logo-link { display: flex; align-items: center; gap: 9px; height: 34px; }
+@media (max-width: 1099px) { .logo-mark, .logo-link { height: 30px; } }
+.logo-icon { height: 100%; width: auto; display: block; }
+.logo-wordmark { display: flex; flex-direction: column; line-height: 1.15; gap: 2px; }
+.logo-wordmark .name { font-family: 'Fraunces', serif; font-weight: 500; font-size: 16px; color: #fff; }
+.logo-wordmark .tag { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 8.5px; letter-spacing: .14em; color: var(--kiwi); }
+@media (max-width: 1099px) { .logo-wordmark .name { font-size: 14px; } }
 
 .main-nav { display: flex; gap: 28px; align-items: center; }
 @media (max-width: 1099px) { .main-nav { display: none; } }
@@ -147,7 +151,7 @@ img, video { max-width: 100%; display: block; }
   padding: 14px 20px; border-radius: 999px; text-align: center;
   margin-top: 12px; font-size: 16px;
 }
-.mobile-menu img { height: 30px; width: auto; margin-top: auto; opacity: .9; }
+.mobile-logo { margin-top: auto; opacity: .9; height: 28px; }
 
 /* ---------- Hero ---------- */
 
@@ -469,7 +473,7 @@ h2.light { color: #fff; }
 .site-footer { background: var(--deep); display: flex; flex-wrap: wrap; gap: 40px; padding: 64px 60px 28px; position: relative; }
 @media (max-width: 1099px) { .site-footer { gap: 32px; padding: 48px 20px 28px; } }
 .footer-col { flex: 1 1 220px; min-width: 180px; display: flex; flex-direction: column; gap: 10px; }
-.footer-col img { height: 32px; width: auto; margin-bottom: 6px; }
+.footer-logo { height: 32px; margin-bottom: 6px; }
 .footer-text { color: rgba(255,255,255,0.6); font-size: 13.5px; line-height: 1.6; max-width: 240px; }
 .footer-head { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
 .footer-head.spaced { margin-top: 14px; }
