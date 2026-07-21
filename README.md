@@ -32,23 +32,32 @@ por lo que necesita conexión a internet para dibujarse.
 ## Assets pendientes de reemplazo
 
 El archivo de diseño original ya señalaba que varios recursos son *placeholders* a reemplazar
-por el material real del cliente antes de publicar. Las imágenes/video reales del proyecto de
-diseño superan el límite de tamaño que se puede sincronizar automáticamente, así que se
-incluyeron ilustraciones vectoriales (SVG) equivalentes en su lugar, en la misma paleta de
-marca y en las mismas rutas/tamaños, para que el sitio se vea completo y funcional. Antes de
-publicar, reemplaza:
+por el material real del cliente antes de publicar. Las imágenes reales del proyecto de diseño
+superan el límite de tamaño que se puede sincronizar automáticamente, así que se incluyeron
+ilustraciones vectoriales (SVG) equivalentes en su lugar, en la misma paleta de marca y en las
+mismas rutas/tamaños, para que el sitio se vea completo y funcional. Antes de publicar, reemplaza:
 
 | Archivo actual (placeholder)              | Reemplazar por                                              |
 |--------------------------------------------|---------------------------------------------------------------|
 | `assets/img/logo-polcura.svg`              | Logo real de Polcura Export                                   |
-| `assets/img/hero-placeholder.svg`          | Video de uvas en el campo (`En_la_segunda_toma_de_las_uvas.mp4`) + foto de poster |
 | `assets/img/presentacion-campo.svg`        | Foto de brote joven en el campo al amanecer                   |
 | `assets/img/producto-cerezas.svg`          | Foto de selección de cerezas en packing                       |
 | `assets/img/producto-uvas-kiwi.svg`        | Foto de uvas/kiwi/cerezas frescas                              |
 | `assets/img/productores.svg`               | Foto de productor con cajón de cerezas recién cosechadas       |
 
-Si se reemplaza `hero-placeholder.svg` por un video real, cambia el `<img>` del hero (`#hero-media`
-en `index.html`) por un `<video autoplay muted loop playsinline poster="...">`.
+Para cada uno, mantén el mismo nombre de archivo (o actualiza la ruta correspondiente en
+`index.html`) y reemplaza el `<img>` por la foto real; el CSS ya está pensado para `object-fit: cover`
+así que cualquier proporción razonable se recorta bien.
+
+### Video del hero
+
+`assets/video/hero-uvas.mp4` (+ poster `assets/img/hero-poster.jpg`, extraído del segundo 1 del
+video) ya están montados y funcionando con autoplay/muted/loop. **Ojo:** el video recibido parece
+generado por IA (se ve el ícono/marca de agua tipo "sparkle" de Gemini en la esquina inferior
+derecha, y está compuesto de varios clips distintos unidos con una transición). Sirve como
+placeholder de alta calidad por ahora, pero antes de publicar en producción debería reemplazarse
+por footage real filmado en terreno, sin marca de agua. Al reemplazarlo, conserva el mismo nombre
+de archivo o actualiza el `src`/`poster` del `<video id="hero-media">` en `index.html`.
 
 ## Datos a validar por Polcura antes de publicar
 

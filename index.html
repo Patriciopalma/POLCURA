@@ -11,11 +11,13 @@
 <!--
   ASSETS PENDIENTES DE REEMPLAZO EN PRODUCCIÓN (ver README.md):
   assets/img/logo-polcura.svg          -> logo real de Polcura Export
-  assets/img/hero-placeholder.svg      -> video/foto real de uvas en el campo
   assets/img/producto-cerezas.svg      -> foto real de cerezas
   assets/img/producto-uvas-kiwi.svg    -> foto real de uvas/kiwi
   assets/img/presentacion-campo.svg    -> foto real de brote en el campo
   assets/img/productores.svg           -> foto real de productor con cajón de cerezas
+  assets/video/hero-uvas.mp4 y assets/img/hero-poster.jpg ya están montados,
+  pero son un video generado por IA (marca de agua de Gemini visible) —
+  reemplazar por footage real del cliente cuando esté disponible.
 -->
 </head>
 <body>
@@ -64,7 +66,7 @@
 
 <!-- HERO -->
 <section id="inicio" data-screen-label="Hero" class="hero">
-  <img src="assets/img/hero-placeholder.svg" alt="Video de uvas frescas en el campo" class="hero-media" id="hero-media"/>
+  <video class="hero-media" id="hero-media" src="assets/video/hero-uvas.mp4" poster="assets/img/hero-poster.jpg" autoplay muted loop playsinline aria-label="Video de uvas frescas en el campo"></video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <span class="hero-tag">EXPORTACIÓN DE FRUTA FRESCA · CHILE + PERÚ</span>

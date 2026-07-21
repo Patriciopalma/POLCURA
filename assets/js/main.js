@@ -38,6 +38,20 @@
   var menuToggle = document.getElementById('menu-toggle');
   var mobileMenu = document.getElementById('mobile-menu');
 
+  /* ---------- Hero video autoplay ---------- */
+  var heroVideo = document.getElementById('hero-media');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    var tryPlayHero = function () { heroVideo.play().catch(function () {}); };
+    tryPlayHero();
+    heroVideo.addEventListener('loadeddata', tryPlayHero);
+    heroVideo.addEventListener('canplay', tryPlayHero);
+    ['click', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+      window.addEventListener(evt, tryPlayHero, { once: true, passive: true });
+    });
+  }
+
   /* ---------- Scroll state ---------- */
   function onScroll() {
     var scrolled = window.scrollY > 40;
