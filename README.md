@@ -13,7 +13,7 @@ mapa-mercados.html          Mapa de mercados (se carga en un <iframe>, dibuja co
 assets/css/style.css        Estilos (con breakpoints en 1099px y 699px, igual que el diseño original)
 assets/js/main.js           Interactividad: menú móvil, scroll header, ES/EN, reveals, contador
                              animado de años, layout del proceso, validación del formulario
-assets/img/*.svg            Ilustraciones de reemplazo (ver abajo)
+assets/img/*.jpg, *.png     Fotos y logo reales del cliente (procesados/optimizados, ver abajo)
 ```
 
 ## Cómo verlo localmente
@@ -29,24 +29,20 @@ y abre `http://localhost:8000`.
 El mapa de mercados (`mapa-mercados.html`) carga D3 y un archivo TopoJSON desde CDNs externos,
 por lo que necesita conexión a internet para dibujarse.
 
-## Assets pendientes de reemplazo
+## Fotos (ya montadas)
 
-El archivo de diseño original ya señalaba que varios recursos son *placeholders* a reemplazar
-por el material real del cliente antes de publicar. Las imágenes reales del proyecto de diseño
-superan el límite de tamaño que se puede sincronizar automáticamente, así que se incluyeron
-ilustraciones vectoriales (SVG) equivalentes en su lugar, en la misma paleta de marca y en las
-mismas rutas/tamaños, para que el sitio se vea completo y funcional. Antes de publicar, reemplaza:
+Todas las fotos de producto/secciones ya son reales, entregadas por el cliente vía Drive y
+optimizadas a JPEG (~150-210 KB cada una, bajado de PNGs de 1.7-2.6 MB):
 
-| Archivo actual (placeholder)              | Reemplazar por                                              |
-|--------------------------------------------|---------------------------------------------------------------|
-| `assets/img/presentacion-campo.svg`        | Foto de brote joven en el campo al amanecer                   |
-| `assets/img/producto-cerezas.svg`          | Foto de selección de cerezas en packing                       |
-| `assets/img/producto-uvas-kiwi.svg`        | Foto de uvas/kiwi/cerezas frescas                              |
-| `assets/img/productores.svg`               | Foto de productor con cajón de cerezas recién cosechadas       |
+| Archivo                                | Sección                                   |
+|-----------------------------------------|--------------------------------------------|
+| `assets/img/presentacion-campo.jpg`     | Empresa — brote joven en el campo           |
+| `assets/img/producto-cerezas.jpg`       | Producto Cerezas                            |
+| `assets/img/producto-uvas-kiwi.jpg`     | Producto Uvas y Kiwi                        |
+| `assets/img/productores.jpg`            | Productores — productor con cajón de cerezas|
 
-Para cada uno, mantén el mismo nombre de archivo (o actualiza la ruta correspondiente en
-`index.html`) y reemplaza el `<img>` por la foto real; el CSS ya está pensado para `object-fit: cover`
-así que cualquier proporción razonable se recorta bien.
+Nota: `producto-cerezas.jpg` es una foto de cerezas en la rama (no en línea de packing como
+sugería el texto alt original); se ajustó el alt para que describa la foto real.
 
 ### Logo (ya montado)
 
